@@ -58,8 +58,14 @@
       "id": 1,
       "name": "Wheel Distance",
       "type": "double"
+    },
+    {
+      "id": 2,
+      "name": "Shutdown ESC Max Pitch",
+      "type": "uint8_t",
+      "default": 0
     }
   ],
   "type": "DiffDriveService",
-  "version": 1
+  "version": 2
 }
