@@ -46,6 +46,86 @@
       "id": 7,
       "name": "Wheel Ticks",
       "type": "uint32_t[2]"
+    },
+    {
+      "id": 8,
+      "name": "Left ESC Rpm",
+      "type": "float"
+    },
+    {
+      "id": 9,
+      "name": "Right ESC Rpm",
+      "type": "float"
+    },
+    {
+      "id": 10,
+      "name": "Left ESC Duty Cycle",
+      "type": "float"
+    },
+    {
+      "id": 11,
+      "name": "Right ESC Duty Cycle",
+      "type": "float"
+    },
+    {
+      "id": 12,
+      "name": "Left ESC Input Voltage",
+      "type": "float"
+    },
+    {
+      "id": 13,
+      "name": "Right ESC Input Voltage",
+      "type": "float"
+    },
+    {
+      "id": 14,
+      "name": "Left ESC Motor Temperature",
+      "type": "float"
+    },
+    {
+      "id": 15,
+      "name": "Right ESC Motor Temperature",
+      "type": "float"
+    },
+    {
+      "id": 16,
+      "name": "Left ESC Tacho Absolute",
+      "type": "uint32_t"
+    },
+    {
+      "id": 17,
+      "name": "Right ESC Tacho Absolute",
+      "type": "uint32_t"
+    },
+    {
+      "id": 18,
+      "name": "Left ESC Direction",
+      "type": "uint8_t"
+    },
+    {
+      "id": 19,
+      "name": "Right ESC Direction",
+      "type": "uint8_t"
+    },
+    {
+      "id": 20,
+      "name": "Left ESC FW Major",
+      "type": "uint8_t"
+    },
+    {
+      "id": 21,
+      "name": "Right ESC FW Major",
+      "type": "uint8_t"
+    },
+    {
+      "id": 22,
+      "name": "Left ESC FW Minor",
+      "type": "uint8_t"
+    },
+    {
+      "id": 23,
+      "name": "Right ESC FW Minor",
+      "type": "uint8_t"
     }
   ],
   "registers": [
@@ -58,8 +138,38 @@
       "id": 1,
       "name": "Wheel Distance",
       "type": "double"
+    },
+    {
+      "id": 2,
+      "name": "Control Mode",
+      "type": "uint8_t",
+      "default": 0
+    },
+    {
+      "id": 3,
+      "name": "Loop Kp",
+      "type": "float",
+      "default": -1
+    },
+    {
+      "id": 4,
+      "name": "Loop Ki",
+      "type": "float",
+      "default": -1
+    },
+    {
+      "id": 5,
+      "name": "Loop Max Output",
+      "type": "float",
+      "default": 0
+    },
+    {
+      "id": 6,
+      "name": "Loop Slew",
+      "type": "float",
+      "default": 0
     }
   ],
   "type": "DiffDriveService",
-  "version": 1
+  "version": 2
 }
