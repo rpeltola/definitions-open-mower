@@ -1,0 +1,57 @@
+{
+  "type": "FilesystemService",
+  "version": 1,
+  "functions": [
+    {
+      "id": 0,
+      "name": "List Files",
+      "parameters": [
+        { "id": 0, "name": "Path", "type": "char[128]" }
+      ],
+      "return_type": "char[1024]"
+    },
+    {
+      "id": 1,
+      "name": "Remove File",
+      "parameters": [
+        { "id": 0, "name": "Path", "type": "char[128]" }
+      ],
+      "return_type": "uint8_t"
+    },
+    {
+      "id": 2,
+      "name": "Add File Chunk",
+      "parameters": [
+        { "id": 0, "name": "Path",   "type": "char[128]" },
+        { "id": 1, "name": "Offset", "type": "uint32_t" },
+        { "id": 2, "name": "Flags",  "type": "uint8_t" },
+        { "id": 3, "name": "Data",   "type": "uint8_t[1024]" }
+      ],
+      "return_type": "uint8_t"
+    }
+  ],
+  "enums": [
+    {
+      "id": "FsChunkFlags",
+      "base_type": "uint8_t",
+      "bitmask": true,
+      "values": {
+        "FIRST": 0,
+        "LAST": 1
+      }
+    },
+    {
+      "id": "FsResult",
+      "base_type": "uint8_t",
+      "values": {
+        "OK": 0,
+        "ERR_IO": 1,
+        "ERR_NOENT": 2,
+        "ERR_INVAL": 3,
+        "ERR_NOSPC": 4,
+        "ERR_SESSION": 5,
+        "ERR_PATH": 6
+      }
+    }
+  ]
+}
