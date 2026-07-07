@@ -106,26 +106,6 @@
       "id": 19,
       "name": "Right ESC Direction",
       "type": "uint8_t"
-    },
-    {
-      "id": 20,
-      "name": "Left ESC FW Major",
-      "type": "uint8_t"
-    },
-    {
-      "id": 21,
-      "name": "Right ESC FW Major",
-      "type": "uint8_t"
-    },
-    {
-      "id": 22,
-      "name": "Left ESC FW Minor",
-      "type": "uint8_t"
-    },
-    {
-      "id": 23,
-      "name": "Right ESC FW Minor",
-      "type": "uint8_t"
     }
   ],
   "registers": [
