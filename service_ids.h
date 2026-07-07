@@ -14,6 +14,7 @@ enum : uint16_t {
   BMS = 9,
   REMOTE_GPIO = 10,
   FILESYSTEM = 11,
+  META = 12,
 };
 }
 

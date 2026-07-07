@@ -126,6 +126,13 @@
       "name": "Shutdown ESC Max Pitch",
       "type": "uint8_t",
       "default": 0
+    },
+    {
+      "id": 12,
+      "name": "Log Debug",
+      "type": "uint8_t",
+      "optional": true,
+      "default": 0
     }
   ],
   "enums": [
