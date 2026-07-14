@@ -4,6 +4,11 @@
       "id": 0,
       "name": "Control Twist",
       "type": "double[6]"
+    },
+    {
+      "id": 1,
+      "name": "Loop Tuning",
+      "type": "double[6]"
     }
   ],
   "outputs": [
@@ -106,6 +111,11 @@
       "id": 19,
       "name": "Right ESC Direction",
       "type": "uint8_t"
+    },
+    {
+      "id": 20,
+      "name": "Control Debug",
+      "type": "double[10]"
     }
   ],
   "registers": [
@@ -148,8 +158,26 @@
       "name": "Loop Slew",
       "type": "float",
       "default": 0
+    },
+    {
+      "id": 7,
+      "name": "Loop Ks",
+      "type": "float",
+      "default": -1
+    },
+    {
+      "id": 8,
+      "name": "Loop Kv",
+      "type": "float",
+      "default": -1
+    },
+    {
+      "id": 9,
+      "name": "Accel Limit",
+      "type": "float",
+      "default": 0
     }
   ],
   "type": "DiffDriveService",
-  "version": 2
+  "version": 3
 }
