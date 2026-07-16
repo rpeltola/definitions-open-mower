@@ -103,16 +103,6 @@
       "type": "uint32_t"
     },
     {
-      "id": 18,
-      "name": "Left ESC Direction",
-      "type": "uint8_t"
-    },
-    {
-      "id": 19,
-      "name": "Right ESC Direction",
-      "type": "uint8_t"
-    },
-    {
       "id": 20,
       "name": "Control Debug",
       "type": "double[10]"
