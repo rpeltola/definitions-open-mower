@@ -93,19 +93,19 @@
       "type": "float"
     },
     {
-      "id": 16,
-      "name": "Left ESC Tacho Absolute",
-      "type": "uint32_t"
-    },
-    {
-      "id": 17,
-      "name": "Right ESC Tacho Absolute",
-      "type": "uint32_t"
-    },
-    {
       "id": 20,
       "name": "Control Debug",
       "type": "double[10]"
+    },
+    {
+      "id": 21,
+      "name": "Left ESC Fault Code",
+      "type": "uint8_t"
+    },
+    {
+      "id": 22,
+      "name": "Right ESC Fault Code",
+      "type": "uint8_t"
     }
   ],
   "registers": [

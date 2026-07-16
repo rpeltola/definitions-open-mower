@@ -56,6 +56,11 @@
       "id": 8,
       "name": "Mower Motor Direction",
       "type": "MowerDirection"
+    },
+    {
+      "id": 9,
+      "name": "Mower ESC Fault Code",
+      "type": "uint8_t"
     }
   ],
   "registers": [],
