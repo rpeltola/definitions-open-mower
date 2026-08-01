@@ -15,6 +15,7 @@ enum : uint16_t {
   REMOTE_GPIO = 10,
   FILESYSTEM = 11,
   META = 12,
+  AUDIO = 13,
 };
 }
 

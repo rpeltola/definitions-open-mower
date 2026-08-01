@@ -1,0 +1,103 @@
+{
+  "type": "AudioService",
+  "version": 1,
+  "inputs": [
+    {
+      "id": 0,
+      "name": "Master Volume",
+      "type": "uint16_t"
+    },
+    {
+      "id": 1,
+      "name": "Quiet Mode",
+      "type": "uint8_t"
+    }
+  ],
+  "outputs": [
+    {
+      "id": 0,
+      "name": "Playing Class",
+      "type": "uint8_t"
+    },
+    {
+      "id": 1,
+      "name": "Alarm State",
+      "type": "uint8_t"
+    },
+    {
+      "id": 2,
+      "name": "Buffer Free Bytes",
+      "type": "uint16_t"
+    },
+    {
+      "id": 3,
+      "name": "Underruns",
+      "type": "uint16_t"
+    },
+    {
+      "id": 4,
+      "name": "Stream Active",
+      "type": "uint8_t"
+    }
+  ],
+  "functions": [
+    {
+      "id": 0,
+      "name": "Play Local",
+      "parameters": [
+        { "id": 0, "name": "Name",  "type": "char[64]" },
+        { "id": 1, "name": "Class", "type": "uint8_t" }
+      ],
+      "return_type": "uint8_t"
+    },
+    {
+      "id": 1,
+      "name": "Play Tone",
+      "parameters": [
+        { "id": 0, "name": "Pattern",     "type": "uint8_t" },
+        { "id": 1, "name": "Class",       "type": "uint8_t" },
+        { "id": 2, "name": "Freq",        "type": "uint16_t" },
+        { "id": 3, "name": "Duration Ms", "type": "uint16_t" },
+        { "id": 4, "name": "Count",       "type": "uint8_t" }
+      ],
+      "return_type": "uint8_t"
+    }
+  ],
+  "enums": [
+    {
+      "id": "AudioClass",
+      "base_type": "uint8_t",
+      "values": {
+        "AMBIENT": 1,
+        "STATUS": 2,
+        "UI": 3,
+        "SAFETY": 4,
+        "ALARM": 5
+      }
+    },
+    {
+      "id": "TonePattern",
+      "base_type": "uint8_t",
+      "values": {
+        "ACK": 0,
+        "ERROR": 1,
+        "WARN": 2,
+        "CHARGE_CONNECT": 3,
+        "CHARGE_DISCONNECT": 4,
+        "BOOT": 5,
+        "SIREN": 6,
+        "CUSTOM": 255
+      }
+    },
+    {
+      "id": "AudioResult",
+      "base_type": "uint8_t",
+      "values": {
+        "OK": 0,
+        "ERR_NOENT": 1,
+        "ERR_DROPPED": 2,
+        "ERR_INVAL": 3
+      }
+    }
+  ]
+}
