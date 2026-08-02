@@ -1,10 +1,15 @@
 {
   "type": "EmergencyService",
-  "version": 2,
+  "version": 3,
   "inputs": [
     {
       "id": 0,
       "name": "High Level Emergency",
+      "type": "uint16_t[2]"
+    },
+    {
+      "id": 1,
+      "name": "Drive Unlock Request",
       "type": "uint16_t[2]"
     }
   ],
@@ -12,6 +17,11 @@
     {
       "id": 0,
       "name": "Emergency Reason",
+      "type": "uint16_t"
+    },
+    {
+      "id": 1,
+      "name": "Drive Unlock State",
       "type": "uint16_t"
     }
   ],
@@ -29,7 +39,8 @@
         "COLLISION": 5,
         "TIMEOUT_HIGH_LEVEL": 6,
         "HIGH_LEVEL": 7,
-        "SERVICE_NOT_READY": 8
+        "SERVICE_NOT_READY": 8,
+        "TILT": 9
       }
     }
   ]
