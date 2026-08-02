@@ -1,6 +1,6 @@
 {
   "type": "AudioService",
-  "version": 1,
+  "version": 2,
   "inputs": [
     {
       "id": 0,
@@ -11,17 +11,17 @@
       "id": 1,
       "name": "Quiet Mode",
       "type": "uint8_t"
+    },
+    {
+      "id": 2,
+      "name": "Stream Frame",
+      "type": "uint8_t[1288]"
     }
   ],
   "outputs": [
     {
       "id": 0,
       "name": "Playing Class",
-      "type": "uint8_t"
-    },
-    {
-      "id": 1,
-      "name": "Alarm State",
       "type": "uint8_t"
     },
     {
@@ -45,8 +45,16 @@
       "id": 0,
       "name": "Play Local",
       "parameters": [
-        { "id": 0, "name": "Name",  "type": "char[64]" },
-        { "id": 1, "name": "Class", "type": "uint8_t" }
+        {
+          "id": 0,
+          "name": "Name",
+          "type": "char[64]"
+        },
+        {
+          "id": 1,
+          "name": "Class",
+          "type": "uint8_t"
+        }
       ],
       "return_type": "uint8_t"
     },
@@ -54,11 +62,55 @@
       "id": 1,
       "name": "Play Tone",
       "parameters": [
-        { "id": 0, "name": "Pattern",     "type": "uint8_t" },
-        { "id": 1, "name": "Class",       "type": "uint8_t" },
-        { "id": 2, "name": "Freq",        "type": "uint16_t" },
-        { "id": 3, "name": "Duration Ms", "type": "uint16_t" },
-        { "id": 4, "name": "Count",       "type": "uint8_t" }
+        {
+          "id": 0,
+          "name": "Pattern",
+          "type": "uint8_t"
+        },
+        {
+          "id": 1,
+          "name": "Class",
+          "type": "uint8_t"
+        },
+        {
+          "id": 2,
+          "name": "Freq",
+          "type": "uint16_t"
+        },
+        {
+          "id": 3,
+          "name": "Duration Ms",
+          "type": "uint16_t"
+        },
+        {
+          "id": 4,
+          "name": "Count",
+          "type": "uint8_t"
+        }
+      ],
+      "return_type": "uint8_t"
+    },
+    {
+      "id": 2,
+      "name": "Start Stream",
+      "parameters": [
+        {
+          "id": 0,
+          "name": "Class",
+          "type": "uint8_t"
+        }
+      ],
+      "return_type": "uint8_t"
+    },
+    {
+      "id": 3,
+      "name": "Stop Stream",
+      "parameters": [
+        {
+          "id": 0,
+          "name": "Flush",
+          "type": "uint8_t"
+        }
       ],
       "return_type": "uint8_t"
     }
@@ -96,7 +148,8 @@
         "OK": 0,
         "ERR_NOENT": 1,
         "ERR_DROPPED": 2,
-        "ERR_INVAL": 3
+        "ERR_INVAL": 3,
+        "ERR_BUSY": 4
       }
     }
   ]
