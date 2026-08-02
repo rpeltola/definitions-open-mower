@@ -1,0 +1,109 @@
+{
+  "type": "SecurityService",
+  "version": 1,
+  "inputs": [
+    {
+      "id": 0,
+      "name": "Trigger Delay S",
+      "type": "uint8_t"
+    },
+    {
+      "id": 1,
+      "name": "Deterrent Delay S",
+      "type": "uint8_t"
+    },
+    {
+      "id": 2,
+      "name": "Siren Delay S",
+      "type": "uint16_t"
+    },
+    {
+      "id": 3,
+      "name": "Siren Max S",
+      "type": "uint16_t"
+    }
+  ],
+  "outputs": [
+    {
+      "id": 0,
+      "name": "Alarm State",
+      "type": "uint8_t"
+    },
+    {
+      "id": 1,
+      "name": "Armed",
+      "type": "uint8_t"
+    },
+    {
+      "id": 2,
+      "name": "Owner Set",
+      "type": "uint8_t"
+    },
+    {
+      "id": 3,
+      "name": "Pin Set",
+      "type": "uint8_t"
+    }
+  ],
+  "functions": [
+    {
+      "id": 0,
+      "name": "Set Armed",
+      "parameters": [
+        { "id": 0, "name": "Pin",   "type": "char[8]" },
+        { "id": 1, "name": "Armed", "type": "uint8_t" }
+      ],
+      "return_type": "uint8_t"
+    },
+    {
+      "id": 1,
+      "name": "Clear Alarm",
+      "parameters": [
+        { "id": 0, "name": "Pin", "type": "char[8]" }
+      ],
+      "return_type": "uint8_t"
+    },
+    {
+      "id": 2,
+      "name": "Trigger Alarm",
+      "parameters": [
+        { "id": 0, "name": "Stage", "type": "uint8_t" }
+      ],
+      "return_type": "uint8_t"
+    },
+    {
+      "id": 3,
+      "name": "Set Owner Info",
+      "parameters": [
+        { "id": 0, "name": "Pin",     "type": "char[8]" },
+        { "id": 1, "name": "New Pin", "type": "char[8]" },
+        { "id": 2, "name": "Text",    "type": "char[128]" }
+      ],
+      "return_type": "uint8_t"
+    }
+  ],
+  "enums": [
+    {
+      "id": "AlarmState",
+      "base_type": "uint8_t",
+      "values": {
+        "DISARMED": 0,
+        "ARMED": 1,
+        "WARNING": 2,
+        "DETERRENT": 3,
+        "SIREN": 4
+      }
+    },
+    {
+      "id": "SecResult",
+      "base_type": "uint8_t",
+      "values": {
+        "OK": 0,
+        "ERR_AUTH": 1,
+        "ERR_INVAL": 2,
+        "ERR_IO": 3,
+        "ERR_LOCKED": 4
+      }
+    }
+  ]
+}
