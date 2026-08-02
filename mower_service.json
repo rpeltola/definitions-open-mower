@@ -61,6 +61,11 @@
       "id": 9,
       "name": "Mower ESC Fault Code",
       "type": "uint8_t"
+    },
+    {
+      "id": 10,
+      "name": "Mower Motor Phase Current",
+      "type": "float"
     }
   ],
   "registers": [],
