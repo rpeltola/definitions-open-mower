@@ -1,6 +1,6 @@
 {
   "type": "FilesystemService",
-  "version": 1,
+  "version": 2,
   "functions": [
     {
       "id": 0,
@@ -28,6 +28,14 @@
         { "id": 3, "name": "Data",   "type": "uint8_t[1024]" }
       ],
       "return_type": "uint8_t"
+    },
+    {
+      "id": 3,
+      "name": "Stat",
+      "parameters": [
+        { "id": 0, "name": "Path", "type": "char[128]" }
+      ],
+      "return_type": "uint32_t[3]"
     }
   ],
   "enums": [
