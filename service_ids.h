@@ -16,6 +16,7 @@ enum : uint16_t {
   FILESYSTEM = 11,
   META = 12,
   AUDIO = 13,
+  SECURITY = 14,
 };
 }
 
